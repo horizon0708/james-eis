@@ -1,0 +1,11 @@
+<div>
+    <%= if @game_status == :ready do %>
+        <%= component_render(@socket, Lobby, @user_id) %>
+    <% end %>
+    <%= if @game_status == :playing do %>
+    <% end %>
+    <%= if @game_status == :ready do %>
+    <% end %>
+    <%= if @game_status == :ended do %>
+    <% end %>
+</div>

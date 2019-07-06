@@ -1,0 +1,18 @@
+<div>
+    <%= f = form_for @changeset, "#", [phx_change: :validate, phx_submit: :join] %>
+        <%= label f, :game_id%>
+        <%= text_input f, :game_id%>
+        <%= error_tag f, :game_id %>
+        
+        <%= if @changeset.valid? == true do %>
+        <div>
+          <%= submit "Join", phx_disable_with: "Joining..." %>
+        </div>
+        <%= else %>
+          <button>No</button>
+        <%= end %>
+    </form>
+      <a href="/setup"><button>Start a Game</button></a>
+
+    <%= component_render(@socket, Test, @user_id) %>
+</div>

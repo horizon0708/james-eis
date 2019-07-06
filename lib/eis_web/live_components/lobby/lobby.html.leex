@@ -1,0 +1,10 @@
+<div>
+<div> game id: <%= @game_id %> </div>
+<div>
+    <%= for player <- @players do %>
+        <p>
+            <%= player %>
+        </p>
+    <% end %>
+</div>
+</div>

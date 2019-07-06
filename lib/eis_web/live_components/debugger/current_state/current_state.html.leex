@@ -1,0 +1,11 @@
+<div>
+
+    <table>
+    <%= for {k, v} <- @game_state do %>
+        <tr>
+            <td><%= k %> </td>
+            <td><%= Poison.encode!(v) %> </td>
+        </tr>
+    <% end %>
+    </table>
+</div>

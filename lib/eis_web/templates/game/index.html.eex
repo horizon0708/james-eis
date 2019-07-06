@@ -1,0 +1,3 @@
+<div>
+    <%= EisWeb.RouterComponent.render @user_id %>
+</div>
